@@ -19,7 +19,7 @@ class Main extends PluginBase implements Listener{
         $this->config = $this->getConfig();
     }
 
-    public function onJoin(PlayerLoginEvent $event)
+    public function onJoin(PlayerJoinEvent $event)
     {
         $player = $event->getPlayer();
         if(!$player->hasPermission('transfer.bypass') || $this->config->get('wl')[$player->getName()] !== true)
